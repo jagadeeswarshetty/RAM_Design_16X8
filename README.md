@@ -27,17 +27,14 @@ It acts as the "working desk" of a system — the larger and faster the RAM, the
 
 In this project, we implement a **simple synchronous single-port SRAM-style RAM** using Verilog.
 
-
-
-```markdown
-# 🧠 RAM Design in Verilog (8-bit × 16 Synchronous Memory)
+ RAM Design in Verilog (8-bit × 16 Synchronous Memory)
 
 This repository contains the complete Verilog implementation of a **synchronous RAM module** along with a fully functional **testbench**.  
 The design is clean, synthesizable, and simulation-friendly for FPGA/ASIC environments.
-```
+
 ---
 
-## 🔍 **1. Introduction**
+##  ** Introduction**
 
 Random Access Memory (RAM) is a fundamental digital storage element used in processors, microcontrollers, and digital systems.  
 This project demonstrates the working of a simple **single-port RAM**, supporting:
@@ -58,7 +55,7 @@ The project is ideal for:
 
 ---
 
-## 🧩 **2. Features**
+## 🧩 ** Features**
 
 - 8-bit wide memory  
 - 16 memory locations (`0–15`)  
@@ -69,46 +66,13 @@ The project is ideal for:
 
 ---
 
-## ⚙️ **3. Block Diagram**
+##  **3. Block Diagram**
 
 
-```
-      +---------------------------+
-      |         RAM DESIGN        |
-      |                           |
-      |   wr_enb ---->●           |
-      |                 \         |
-```
-
-Data_in ---->●              \        |
-\              \       |
---> Memory ----> data_out
-/              /      |
-addr --->●            /       |
-|                 /         |
-|   rd_addr ----●          |
-+---------------------------+
-↑
-|
-clk
-
-```
 
 ---
 
-## 📂 **4. Project Structure**
-
-```
-
-├── RAM_DESIGN.v          # RTL code for RAM
-├── RAM_DESIGN_TB.v       # Complete testbench
-└── README.md             # Documentation
-
-````
-
----
-
-## 🔧 **5. Verilog Code (RTL)**
+##  **5. Verilog Code (RTL)**
 
 ```verilog
 module RAM_DESIGN(
@@ -199,7 +163,7 @@ endmodule
 
 ---
 
-## 🧠 **8. Applications**
+##  ** Applications**
 
 * FPGA internal memory modeling
 * CPU register file experiments
@@ -209,26 +173,7 @@ endmodule
 
 ---
 
-## 🚀 **9. How to Run the Simulation**
-
-### **Vivado**
-
-1. Create new RTL project
-2. Add both `.v` files
-3. Set testbench (`RAM_DESIGN_TB.v`) as **top**
-4. Run behavioral simulation
-
-### **ModelSim / Questa**
-
-```bash
-vlog RAM_DESIGN.v RAM_DESIGN_TB.v
-vsim RAM_DESIGN_TB
-run -all
-```
-
----
-
-## 🔮 **10. Future Improvements**
+##  ** Future Improvements**
 
 * Add byte-enable signals
 * Add write-read simultaneous support
@@ -238,7 +183,7 @@ run -all
 
 ---
 
-## 📚 **11. References**
+##  ** References**
 
 * IEEE Verilog HDL Standard
 * Xilinx Memory Inference Guide
@@ -254,16 +199,3 @@ Interested in Digital Design, Networking, and FPGA Systems
 
 ---
 
-```
-
----
-
-If you want, I can also create:
-
-📌 **GitHub banner image**  
-📌 **High-quality block diagram PNG**  
-📌 **PDF project report**  
-📌 **Animated waveform GIF**  
-
-Just tell me!
-```
