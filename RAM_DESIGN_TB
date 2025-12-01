@@ -1,0 +1,63 @@
+module RAM_DESIGN_TB;
+
+    reg clk, rst, wr_enb, rd_enb;
+    reg [3:0] wr_addr;
+    reg [3:0] rd_addr;
+    reg [7:0] data_in;
+    wire [7:0] data_out;
+
+    RAM_DESIGN dut(
+        .clk(clk),
+        .rst(rst),
+        .wr_enb(wr_enb),
+        .rd_enb(rd_enb),
+        .wr_addr(wr_addr),
+        .rd_addr(rd_addr),
+        .data_in(data_in),
+        .data_out(data_out)
+    );
+
+    initial begin
+        clk = 0;
+        rst = 1;
+        wr_enb = 0;
+        rd_enb = 0;
+        wr_addr = 0;
+        rd_addr = 0;
+        data_in = 0;
+
+        #10 
+        rst = 0;
+
+        // Write 5 at address 4
+        //Here we can change the location and address (eg 16 locations and 8 widths).
+
+NOTE: Whenever the wr_enb = 1(write) opertaion will done,wr_enb = 0(Read) operation will be done.
+        wr_enb = 1;
+        wr_addr = 4;
+        data_in = 5;
+        #10;
+
+        // Write 10 at address 5
+        wr_enb = 1; // write operation will be done 
+        wr_addr = 5;
+        data_in = 10;
+        #10;
+
+        wr_enb = 0; // Read operation performs
+
+        // Read address 4
+        rd_enb = 1;
+        rd_addr = 4;
+        #10;
+
+        // Read address 5
+        rd_addr = 5;
+        #10;
+
+        $finish;
+    end
+
+    always #5 clk = ~clk;
+
+endmodule
