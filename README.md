@@ -70,22 +70,14 @@ more RAM leads to a smoother and more responsive experience.
 
 ## RAM vs Storage (HDD/SSD)
 
-  --------------------------------------------------------------------------
-  Feature      RAM (Primary Memory)        Storage (Secondary Memory)
-  ------------ --------------------------- ---------------------------------
-  Purpose      Temporary workspace for     Permanent storage for files,
-               active programs and data    apps, OS
+| Feature     | RAM (Primary Memory) | Storage (Secondary Memory) |
+|------------|------------------------|-----------------------------|
+| **Purpose** | Temporary workspace for active programs and data | Permanent storage for files, apps, OS |
+| **Speed** | Very fast (GHz/MHz, nanoseconds) | Slower (MB/s or GB/s) |
+| **Volatility** | Volatile (data lost when power is off) | Non-volatile |
+| **Capacity** | 4GB to 128GB | 256GB to 24TB+ |
+| **Cost** | More expensive per GB | Less expensive per GB |
 
-  Speed        Very fast (GHz/MHz,         Slower (MB/s or GB/s)
-               nanoseconds)                
-
-  Volatility   Volatile (data lost when    Non-volatile
-               power is off)               
-
-  Capacity     4GB to 128GB                256GB to 24TB+
-
-  Cost         More expensive per GB       Less expensive per GB
-  --------------------------------------------------------------------------
 
 ## How Much RAM You Need
 
